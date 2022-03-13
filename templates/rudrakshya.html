@@ -1,0 +1,128 @@
+﻿{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div style="background-color: #f5faff">
+    <div class="container-fluid pt-5">
+        <div class="row">
+            <div class="col-lg-12 order-lg-12 order-2">
+                <h1 class="text-center" style="margin:70px;">{{object.category}}</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2 order-lg-1 order-2"></div>
+            <div class="col-lg-4 order-lg-2 order-1">
+                <img id="image_selected" class="image_selected" src=/{{object.image.url}} alt="">
+            </div>
+            <div class="col-lg-6 order-3">
+                <div class="product_description">
+                    <div class="product_name"><h3 class="text-capitalize">{{object.subcategory}}</h3></div>
+                    
+
+                    <div>
+                        
+
+                        <hr class="singleline">
+                        <div class="order_info d-flex flex-row">
+                            <form action="#">
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6" style="margin-left: 13px;">
+                                {% if object.description %}
+                                <h5>{{object.description}}</h5>
+                                {% else %}
+                                <h5></h5>
+                                {% endif %}
+                            </div>
+                            {% if user.is_authenticated %}
+                            <form class="book-product" method="POST" id="book-product">
+                                {% csrf_token %}
+
+                                <button type="button" id="rudrakshya-button" data-value="{{object.subcategory}}" class="btn btn-outline-primary booknow" id="">
+                                    Book Now
+                                </button>
+                            </form>
+                            {% else %}
+                            <a href="/" id="rudrakshya-button" class="btn btn-outline-primary ">
+                                Login
+                            </a>
+                            {% endif %}
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br /><br />
+    </div>
+
+ </div>
+{% endblock %}
+{% block modal %}
+<div class="modal fade" id="bookModal" data-backdrop="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h2 class="modal-title"><br /><b>Do you want to confirm your bookings?</b></h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center" style="min-width:100%">
+                <b class="">Press OK to confirm.</b>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-light" id="btnOk" data-value="">OK</a>
+                    <button type="button" class="btn btn-light" id="btnCancel" data-dismiss="modal">Cancel</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ {% endblock %}
+{% block scripts %}
+<script>
+    $(document).ready(function e() {
+        console.log("loaded");
+    })
+    $('#btnCancel').click(function e() {
+        $(document).ready(function () {
+            setTimeout(function () {
+
+                location.reload(true);
+            }, 100);
+        });
+    })
+    $('#btnOk').click(function e() {
+        var jData = "{{ csrf_token }}";
+        var value = $(this).data('value');
+        
+        $.ajax({
+            type: "POST",
+            url: "{% url 'book_management' %}",
+      
+
+            dataType: "json",
+
+            data: { csrfmiddlewaretoken: jData, 'hidden': value },
+            
+        });
+        $(document).ready(function () {
+            setTimeout(function () {
+
+                location.reload(true);
+            }, 100);
+
+        });
+        $("#bookModal").modal("hide");
+
+    })
+    $('.booknow').click(function e() {
+        var jData = "{{ csrf_token }}";
+        var value = $(this).data('value');
+        $('.btn').attr('data-value', value);
+            $("#bookModal").modal("show"); });
+</script>
+{% endblock %}

@@ -1,0 +1,336 @@
+﻿{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="row col-md-12">
+    <div class="row col-md-9 pt-1" style="margin-top: 100px; margin-left: 0px;">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="{% static 'Images/car1.jpg' %}"
+                         alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{% static 'Images/car2.jpg' %}"
+                         alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{% static 'Images/car3.jpg' %}"
+                         alt="Third slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div class="row loghead col-md-3" style="margin-left: 10px; background-color: rgb(0, 119, 179) " ;>
+        <div class="wrapper fadeInDown" id="pageWrap">
+            <div id="formContent">
+             
+
+                <!-- Login Form -->
+                <section id="main-content">
+                    <div id="guts">
+                        <div class="card bg-light">
+
+                            <h5 class="text-center">Welcome,  {{user.first_name}} {{user.last_name}}</h5>
+                            <hr class="mx-auto w-25">
+                            <p class="text-justify">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+<section id="about">
+
+    <div class="container-fluid pt-5">
+        <h1 class="text-center text-capitalize pt-5">About (प्रारम्भिक जानकारी) </h1>
+        <hr class="w-25 pt-5 mx-auto">
+        <div class="row" style="background-color: rgb(0, 119, 179);">
+            <div class="col-md-1">&nbsp;</div>
+            <div class="col-lg-5 col-md-5 col-12">
+                <div class="janak">
+                    <img src="{% static 'Images/d.jpg' %}" class="img-fluid">
+                </div>
+
+            </div>
+            <div class="col-lg-5 col-md-5 col-12">
+
+                <p class="text-justify" style="color: white;">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    I am Hindu astrologer. I have completed Bachelor's Degree (Shastri) in astrology from Nepal Sanskrit University in 1990 and I have been practicing in this field since then. My specialization is in reading Janma Kundali (birth-chart) and Vastu Sastra. Astrology is a pseudoscience that claims divine information about human affairs and terrestrial events by studying the movements and relative positions of celestial objects. Astrology has been dated to at least the 2nd millennium BCE, and has its roots in calendrical systems used to predict seasonal shifts and to interpret celestial cycles as signs of divine communications.
+                </p>
+                <div class="pt-2">
+                    <a href="/#services" class="btn btn-outline-light" role="button">Explore More</a>
+                </div>
+                <footer></footer>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<section id="services">
+    <div class="container-fluid pt-5">
+        <h1 class="text-center text-capitalize pt-5">Services</h1>
+        <hr class="w-25 mx-auto">
+        <div class="row service-bg" style="background-image: url({% static 'Images/cream.jpg' %});">
+            <div class="col-md-1">&nbsp;</div>
+            <div class="mar col-md-3">
+                <img class="service-img" src="{% static 'Images/f.png' %}">
+
+            </div>
+            <div class="mar col-md-1">
+                <div class="v1"> </div>
+            </div>
+            <div class="mar col-md-6">
+                <h3 class="text-center text-capitalize">Janma Kundali Making (चिना निर्माण)</h3>
+                <hr class="w-25 mx-auto">
+                <p class="text-justify">
+                    Janma Kundali or Chinaa  is the most important tool for knowing one's future.
+                    Therefore, it is appropriate for a person who wants to know about his future to make a horoscope. We will make horoscopes with two or four Kundalis as per the person's order.
+                    For this, the person's date of birth, time of birth and place of birth are required.
+                </p>
+                <div class="pt-3">
+                    <a href="/janmakundali" class="btn btn-outline-primary" role="button">View More</a>
+                </div>
+            </div>
+
+            <div class="mar col-md-1">&nbsp;</div>
+
+            <div class="col-md-1">&nbsp;</div>
+
+
+
+            <div class="mar col-md-3">
+                <img class="service-img" src="{% static 'Images/f.png' %}">
+
+            </div>
+            <div class="mar col-md-1">
+                <div class="v1"> </div>
+            </div>
+            <div class="mar col-md-6">
+                <h3 class="text-center text-capitalize">Bhavishya Phal Kathan (भविष्य फलकथन)</h3>
+                <hr class="w-25 mx-auto">
+                <p class="text-justify">
+                    We will predict the person's future on the basis of Janma Kundali.
+                    In this we will answer the questions asked by the person.
+                    We will provide the informations about the health, education, business, marital life, children, foreign employment etc. of the people.
+                </p>
+                <div class="pt-3">
+                    <a href="/bhabishya-fal-kathan" class="btn btn-outline-primary" role="button">View More</a>
+                </div>
+            </div>
+
+            <div class="mar col-md-1">&nbsp;</div>
+
+            <div class="col-md-1">&nbsp;</div>
+
+
+
+            <div class="mar col-md-3">
+                <img class="service-img" src="{% static 'Images/f.png' %}">
+
+            </div>
+            <div class="mar col-md-1">
+                <div class="v1"> </div>
+            </div>
+            <div class="mar col-md-6">
+                <h3 class="text-center text-capitalize">Bastu Paramarsha</h3>
+                <hr class="w-25 mx-auto">
+                <p class="text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <div class="pt-3">
+                    <a href="/bastu-paramarsa" class="btn btn-outline-primary" role="button">View More</a>
+                </div>
+            </div>
+
+            <div class="mar col-md-1">&nbsp;</div>
+
+            <div class="col-md-1">&nbsp;</div>
+
+
+
+            <div class="mar col-md-3">
+                <img class="service-img" src="{% static 'Images/f.png' %}">
+
+            </div>
+            <div class="mar col-md-1">
+                <div class="v1"> </div>
+            </div>
+            <div class="mar col-md-6">
+                <h3 class="text-center text-capitalize">Graha Shanti</h3>
+                <hr class="w-25 mx-auto">
+                <p class="text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <div class="pt-3">
+                    <a href="/graha-shanti" class="btn btn-outline-primary" role="button">View More</a>
+                </div>
+            </div>
+
+            <div class="mar col-md-1">&nbsp;</div>
+
+            <div class="col-md-1">&nbsp;</div>
+
+
+
+            <div class="mar col-md-3">
+                <img class="service-img" src="{% static 'Images/f.png' %}">
+
+            </div>
+            <div class="mar col-md-1">
+                <div class="v1"> </div>
+            </div>
+            <div class="mar col-md-6">
+                <h3 class="text-center text-capitalize">Business Prediction</h3>
+                <hr class="w-25 mx-auto">
+                <p class="text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <div class="pt-3">
+                    <a href="/business-prediction" class="btn btn-outline-primary" role="button">View More</a>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+</section>
+
+
+
+<section id="contact">
+    <br>
+    <br>
+    <div class="container-fluid">
+        <h1 class="text-center text-capitalize pt-5">Contact</h1>
+        <hr class="w-25 pt-5 mx-auto">
+    </div>
+    <div class="contact-bg">
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="google-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2608.4358784226206!2d85.25841746669686!3d27.70218733885129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1593157945452!5m2!1sen!2snp" width="250" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <a href=""><ion-icon class="social-media" name="logo-facebook"></ion-icon></a>
+                <a href=""><ion-icon class="social-media" name="logo-instagram"></ion-icon></a>
+                <a href=""><ion-icon class="social-media" name="logo-twitter"></ion-icon></a>
+                <a href=""><ion-icon class="social-media" name="navigate-outline"></ion-icon></a>
+                <br>
+                <br><br>
+                <h5>Porf. Dr. Jyo. Janak Raj Bhatta</h5>
+                <br>
+                <h6>
+                    Contact No: 9850000000
+                    <br>
+                    <br>
+                    Email Id: jbhs@gshgh
+                </h6>
+            </div>
+            <div class="col-md-4">
+                <div class="contact-form">
+                    <section class="resume-section text-center" id="contact">
+                        <div class="my-auto">
+
+
+
+                            <div class=" your-info container-fluid text-center text-capitalize">Your Info</div>
+                            <form class="contact-form d-flex flex-column align-items-center"
+                                  action={% url 'contactform1' %}
+                                  method="POST">
+                                {% csrf_token %}
+                                <div class="form-group w-75">
+
+                                    <input type="text"
+                                           class="form-control"
+                                           placeholder="Enter Your Full Name"
+                                           name="full_name"
+                                           required />
+                                </div>
+                                <div class="form-group w-75">
+
+                                    <input type="email"
+                                           class="form-control"
+                                           placeholder="Enter Your Email id"
+                                           name="email"
+                                           required />
+                                </div>
+                                <div class="form-group w-75">
+
+                                    <input type="tel"
+                                           class="form-control"
+                                           placeholder="Enter Your Contact Number"
+                                           name="telephone"
+                                           required />
+                                </div>
+                                <div class="form-group w-75">
+
+                                    <textarea class="form-control"
+                                              type="text"
+                                              placeholder="Enter Your Message"
+                                              rows="7"
+                                              name="msg"
+                                              required></textarea>
+                                </div>
+                                <div class="submit">
+                                    <button type="submit" class="btn btn-submit btn-success">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

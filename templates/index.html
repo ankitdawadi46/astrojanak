@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 725px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar fixed-top navbar-expand-xl navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Janak Raj Bhatta</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#services" id="navbarDropdown">
+                            Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html" aria-haspopup="true">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" aria-haspopup="true">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="videos.html" aria-haspopup="true">Videos</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" aria-haspopup="true">Contact</a>
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="/login1" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a>
+                    </li>
+
+                    <div id="id01" class="modal">
+
+                        <form class="modal-content animate" action="/action_page.php" method="post">
+                            <div class="imgcontainer">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <div class="text-center text-capitalize pt-3 h2 text-dark">Login</div>
+
+                            </div>
+
+
+
+                            <div class="container">
+
+                                <label for="uname"><b>Username</b></label>
+                                <br>
+                                <input type="text" placeholder="Enter Username" name="uname" required>
+
+
+                                <label for="psw"><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" name="psw" required>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="remember-me">
+                                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+
+
+
+                                    <button class="login-button btn-outline-primary" type="submit">Login</button>
+
+
+                                </div>
+                                <div class="col-5">&nbsp;</div>
+
+
+
+                                <div class="col-12 pt-3">
+                                    <a href="#"><p class="text-center">Forget password ?</p></a>
+
+                                    <a href="register.html"><p class="text-center">Register Now</p></a>
+                                </div>
+                        </form>
+                    </div>
+                    </form>
+            </div>
+
+
+            <script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+            </script>
+
+            </li>
+
+            </li>
+            </ul>
+
+            </div>
+
+        </nav>
+
+
+        <div id="demo" class="carousel slide" data-ride="carousel">
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="Images/car1.jpg" alt="Los Angeles" width="1100" height="500">
+
+                </div>
+                <div class="carousel-item">
+                    <img src="Images/car2.jpg" alt="Chicago" width="1100" height="500">
+
+                </div>
+                <div class="carousel-item">
+                    <img src="Images/car3.jpg" alt="New York" width="1100" height="500">
+
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+
+        </div>
+    </header>
+    <section id="about">
+
+        <div class="container-fluid pt-5">
+            <h1 class="text-center text-capitalize pt-5">About</h1>
+            <hr class="w-25 pt-5 mx-auto">
+            <div class="row">
+                <div class="col-lg-1 col-md-1 col-12">&nbsp; </div>
+                <div class="col-lg-5 col-md-5 col-12">
+                    <div class="janak">
+                        <img src="Images/d.jpg" class="img-fluid">
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-3 col-12">
+                    <h1 class="text-center text-capitalize"> Namaskar </h1>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <div class="pt-3">
+                        <a href="#" class="btn btn-outline-primary" role="button">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-12">&nbsp; </div>
+            </div>
+        </div>
+    </section>
+    <section id="services">
+        <div class="container-fluid pt-5">
+            <h1 class="text-center text-capitalize pt-5">Services</h1>
+            <hr class="w-25 pt-5 mx-auto">
+            <div class="row">
+
+                <div class="mar col-md-1">&nbsp;</div>
+
+
+                <div class="mar col-md-3">
+                    <img class="service-img" src="Images/f.png">
+
+                </div>
+                <div class="mar col-md-1">
+                    <div class="v1"> </div>
+                </div>
+                <div class="mar col-md-6">
+                    <h3 class="text-center text-capitalize">Janma Kundali</h3>
+                    <hr class="w-25 mx-auto">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <div class="pt-3">
+                        <a href="/janma kundali.html" class="btn btn-outline-primary" role="button">View More</a>
+                    </div>
+                </div>
+
+                <div class="mar col-md-1">&nbsp;</div>
+
+
+
+
+                <div class="mar col-md-1">&nbsp;</div>
+
+                <div class="mar col-md-6">
+
+                    <h3 class="text-center text-capitalize">Bhawishya Phal Kathan</h3>
+                    <hr class="w-25 mx-auto">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                    </p>
+                    <div class="pt-3">
+                        <a href="bhabishya_fal_kathan.html" class="btn btn-outline-primary" role="button">View More</a>
+                    </div>
+
+                </div>
+                <div class="mar col-md-1">
+                    <div class="v2"> </div>
+                </div>
+
+                <div class="mar col-md-3">
+                    <img class="service-img" src="Images/f.png">
+
+                </div>
+
+
+                <div class="mar col-md-1">&nbsp;</div>
+
+
+                <div class="mar col-md-1">&nbsp;</div>
+
+
+                <div class="mar col-md-3">
+                    <img class="service-img" src="Images/f.png">
+
+                </div>
+                <div class="mar col-md-1">
+                    <div class="v1"> </div>
+                </div>
+                <div class="mar col-md-6">
+                    <h3 class="text-center text-capitalize">Vastu Paramarsha</h3>
+                    <hr class="w-25 mx-auto">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                    </p>
+                    <div class="pt-3">
+                        <a href="bastu paramarsa.html" class="btn btn-outline-primary" role="button">View More</a>
+                    </div>
+                </div>
+
+                <div class="mar col-md-1">&nbsp;</div>
+
+
+
+
+                <div class="mar col-md-1">&nbsp;</div>
+
+                <div class="mar col-md-6">
+
+                    <h3 class="text-center text-capitalize">Graha Shanti</h3>
+                    <hr class="w-25 mx-auto">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                    </p>
+                    <div class="pt-3">
+                        <a href="Graha shanti.html" class="btn btn-outline-primary" role="button">View More</a>
+                    </div>
+
+                </div>
+                <div class="mar col-md-1">
+                    <div class="v2"> </div>
+                </div>
+
+                <div class="mar col-md-3">
+                    <img class="service-img" src="Images/f.png">
+
+                </div>
+
+
+                <div class="mar col-md-1">&nbsp;</div>
+
+                <div class="mar col-md-1">&nbsp;</div>
+
+
+                <div class="mar col-md-3">
+                    <img class="service-img" src="Images/f.png">
+
+                </div>
+                <div class="mar col-md-1">
+                    <div class="v1"> </div>
+                </div>
+                <div class="mar col-md-6">
+                    <h3 class="text-center text-capitalize">Business Prediction</h3>
+                    <hr class="w-25 mx-auto">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                    </p>
+                    <div class="pt-3">
+                        <a href="Business Prediction.html" class="btn btn-outline-primary" role="button">View More</a>
+                    </div>
+                </div>
+
+                <div class="mar col-md-1">&nbsp;</div>
+
+                <div class="mar col-md-1">&nbsp;</div>
+            </div>
+        </div>
+
+
+
+
+
+    </section>
+
+    <section id="contact">
+        <br>
+        <br>
+
+        <div class="container-fluid pt-5">
+            <h1 class="text-center text-capitalize">Contact</h1>
+            <hr class="w-25 pt-3 mx-auto">
+        </div>
+
+        <div class="contact-bg">
+            <div class="row">
+                <div class="col-md-1">&nbsp;</div>
+                <div class="col-md-3">
+                    <div class="google-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d734.3274418060375!2d85.25859833404402!3d27.70209144718716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1schandragiri%2013!5e1!3m2!1sen!2snp!4v1592994815328!5m2!1sen!2snp" width="300" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <a href=""><ion-icon class="social-media" name="logo-facebook"></ion-icon></a>
+                    <a href=""><ion-icon class="social-media" name="logo-instagram"></ion-icon></a>
+                    <a href=""><ion-icon class="social-media" name="logo-twitter"></ion-icon></a>
+                    <a href=""><ion-icon class="social-media" name="navigate-outline"></ion-icon></a>
+                    <br>
+                    <br><br>
+                    <h4>Porf. Dr. Jyo. Janak Raj Bhatta</h4>
+                    <br>
+                    <h5>
+                        Contact No: 9850000000
+                        <br>
+                        <br>
+                        Email Id: jbhs@gshgh
+                    </h5>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="contact-form">
+
+                        <section class="resume-section p-4 p-lg-5 text-center" id="contact">
+                            <div class="my-auto">
+
+
+
+
+
+                                <div class=" your-info container-fluid text-center text-capitalize">Your Info</div>
+                                <form class="contact-form d-flex flex-column align-items-center"
+                                      action="https://formspree.io/youremail@mail.com"
+                                      method="POST">
+                                    <div class="form-group w-75">
+
+                                        <input type="name"
+                                               class="form-control"
+                                               placeholder="Enter Your Full Name"
+                                               name="name"
+                                               required />
+                                    </div>
+                                    <div class="form-group w-75">
+
+                                        <input type="email"
+                                               class="form-control"
+                                               placeholder="Enter Your Email id"
+                                               name="name"
+                                               required />
+                                    </div>
+                                    <div class="form-group w-75">
+
+                                        <input type="contact"
+                                               class="form-control"
+                                               placeholder="Enter Your Contact Number"
+                                               name="name"
+                                               required />
+                                    </div>
+                                    <div class="form-group w-75">
+
+                                        <textarea class="form-control"
+                                                  type="text"
+                                                  placeholder="Enter Your Message"
+                                                  rows="7"
+                                                  name="name"
+                                                  required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-submit btn-success">Submit</button>
+                                </form>
+                            </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+
+
+    </section>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+	/*
+	$('#navbarDropdown').on('click',function e(){
+		$container=$("html,body");
+$scrollTo=$('.services')
+$container.animate({scrollTop: $scrollTo.offset().top - $container.offset().top +
+$container.scrollTop(), scrollLeft: 0},300);
+});*/
+    </script>
+    <footer class="text-center"> copyright @ developerdgd </footer>
+</body>
+</html>

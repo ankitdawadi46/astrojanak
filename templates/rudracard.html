@@ -1,0 +1,59 @@
+﻿{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<div class="container-fluid pt-5">
+    <h1 class="text-center text-capitalize pt-5">{{object.name}}</h1>
+    <hr class="w-25 pt-5 mx-auto">
+
+
+    <div class="row">
+        {% for prod in product_list %}
+
+
+        <div class="col-md-1">&nbsp;</div>
+
+        <div class="col-md-3">
+
+            <!--Card-->
+            <a href="{{prod.get_absolute_url}}">
+                <div class=" hover-effect card card-cascade card-ecommerce wider">
+
+                    <!--Card image-->
+                    <div id="view" class="view">
+                        <img id="card-img-top" class="card-img-top" src="{{prod.image.url}}"
+                             alt="">
+                        <a>
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <!--/.Card image-->
+                    <!--Card content-->
+                    <div class="card-body card-body-cascade text-center">
+                        <!--Category & Title-->
+
+                        <h4 class="card-title text-primary font-weight-bold">{{prod.subcategory}}</h4>
+
+                        <!--Description-->
+                        <p class="card-text"></p>
+
+                        <!--Card footer-->
+                        
+
+                    </div>
+                    <!--/.Card content-->
+
+                </div>
+                <!--/.Card-->
+                </a>
+            <br />
+
+        </div>
+        
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}

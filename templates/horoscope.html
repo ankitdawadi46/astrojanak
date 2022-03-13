@@ -1,0 +1,257 @@
+﻿{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div style=" background-color: #f5faff">
+        <div class="row">
+
+            <div class=" col-md-12 pt-5">
+                <h1 class="text-center" style="margin-top: 50px;">मासिक राशिफल</h1>
+                <hr class="mx-auto w-25">
+            </div>
+        </div>
+
+        <div class="container my-4">
+
+            <h5>महिना: {{horoscope.month}}</h5>
+        </div>
+        <div class="row container-fluid">
+
+            <div class="row col-md-4">
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="{% static 'Images/rashi/mesh.png' %}" alt="Avatar" class="flip-card-image">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>मेष</h1>
+
+                            <p>
+                                {{horoscope.Mesh}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-md-4">
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="{% static 'Images/rashi/brish.png' %}" alt="Avatar"class="flip-card-image">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>बृष</h1>
+
+                            <p>
+                                {{horoscope.Brish}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-md-4">
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="{% static 'Images/rashi/mithun.png' %}" alt="Avatar" class="flip-card-image">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>मिथुन</h1>
+
+                            <p>
+                                {{horoscope.Mithun}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row container-fluid pt-5">
+
+            <div class="row col-md-4">
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="{% static 'Images/rashi/karkat.png' %}" alt="Avatar" class="flip-card-image">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>कर्कट</h1>
+
+                            <p>
+                                {{horoscope.Karkat}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-md-4">
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="{% static 'Images/rashi/singha.png' %}" alt="Avatar" class="flip-card-image">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>सिंह</h1>
+
+                            <p>
+                                {{horoscope.Singha}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-md-4">
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="{% static 'Images/rashi/kanya.png' %}" alt="Avatar" class="flip-card-image">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>कन्या</h1>
+
+                            <p>
+                                {{horoscope.Kanya}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row container-fluid pt-5">
+
+            <div class="row col-md-4">
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="{% static 'Images/rashi/tula.png' %}" alt="Avatar" class="flip-card-image">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>तुला</h1>
+
+                            <p>
+                                {{horoscope.Tula}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-md-4">
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="{% static 'Images/rashi/brischik.png' %}" alt="Avatar" class="flip-card-image">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>वृश्चिक</h1>
+
+                            <p>
+                                {{horoscope.Brischik}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-md-4">
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="{% static 'Images/rashi/dhanu.png' %}" alt="Avatar" class="flip-card-image">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>
+                                धनु
+                            </h1>
+
+                            <p>
+                                {{horoscope.Dhan}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row container-fluid pt-5">
+
+            <div class="row col-md-4">
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="{% static 'Images/rashi/makar.png' %}" alt="Avatar" class="flip-card-image">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>मकर</h1>
+
+                            <p>
+                                {{horoscope.Makar}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-md-4">
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="{% static 'Images/rashi/kumbha.png' %}" alt="Avatar" class="flip-card-image">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>कुम्भ</h1>
+
+                            <p>
+                                {{horoscope.Kumbha}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-md-4">
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="{% static 'Images/rashi/min.png' %}" alt="Avatar"class="flip-card-image">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>मीन</h1>
+
+                            <p>
+                                {{horoscope.Min}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <br />
+        
+    </div>
+{% endblock %}

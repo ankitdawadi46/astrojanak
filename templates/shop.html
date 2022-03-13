@@ -1,0 +1,37 @@
+﻿{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<div class="container-fluid pt-5"style="background-color: #f5faff">
+	<h1 class="text-center text-capitalize pt-5">सामानका प्रकारहरु</h1>
+	<hr class="w-25 pt-5 mx-auto">
+	<div class="row">
+		{% for i in object_list %}
+		<div class="col-md-1">&nbsp;</div>
+
+
+
+		<div class="mar col-md-3">
+			<img class="service-img" src="{{i.image.url}}">
+
+		</div>
+		<div class="mar col-md-1">
+			<div class="v1"> </div>
+		</div>
+		<div class="mar col-md-6">
+			<h3 class="text-center text-capitalize">{{i.name}}</h3>
+			<hr class="w-25 mx-auto">
+			<p class="text-justify">
+				{{i.description}}
+			</p>
+			<div class="pt-3">
+				<a href="{{i.get_absolute_url}}" class="btn btn-outline-primary" id="all-btn" role="button">View More</a>
+			</div>
+		</div>
+
+		<div class="mar col-md-1">&nbsp;</div>
+		{% endfor %} 
+		</div>
+	</div>
+
+		
+{% endblock %}

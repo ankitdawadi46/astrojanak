@@ -1,0 +1,201 @@
+﻿{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container-fluid pt-5">
+	<h1 class="text-center text-capitalize pt-5">Business Prediction</h1>
+	<hr class="w-25 pt-5 mx-auto">
+	<div class="row">
+		<div class="mar col-md-1">&nbsp;</div>
+		<div class="mar col-md-3">
+			<img class="service-img" src="{% static 'Images/rudrakshya.jpg' %}">
+		</div>
+		<div class="mar col-md-1">
+			<div class="v1"> </div>
+		</div>
+		<div class="mar col-md-6">
+			<h3 class="text-center text-capitalize">Shop</h3>
+			<hr class="w-25 mx-auto">
+			<p class="text-justify">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+			</p>
+			<div class="pt-3">
+				<div class="container">
+					<!-- Button to Open the Modal -->
+					{% if user.is_authenticated %}
+					<form class="service-book" method="POST" id="service-book">
+						{% csrf_token %}
+						<button type="button" data-value="Shop business prediction" class="btn btn-outline-primary booknow" id="">
+							Book Now
+						</button>
+					</form>
+					{% else %}
+					<a href="/" class="btn btn-outline-primary ">
+						Login
+					</a>
+					{% endif %}
+					<!-- The Modal -->
+				</div>
+			</div>
+		</div>
+		<div class="mar col-md-1">&nbsp;</div>
+	</div>
+	<div class="row">
+		<div class="mar col-md-1">&nbsp;</div>
+		<div class="mar col-md-3">
+			<img class="service-img" src="{% static 'Images/rudrakshya.jpg' %}">
+		</div>
+		<div class="mar col-md-1">
+			<div class="v1"> </div>
+		</div>
+		<div class="mar col-md-6">
+			<h3 class="text-center text-capitalize">Factory</h3>
+			<hr class="w-25 mx-auto">
+			<p class="text-justify">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<div class="pt-3">
+				<div class="container">
+					<!-- Button to Open the Modal -->
+					{% if user.is_authenticated %}
+					<form class="service-book" method="POST" id="service-book">
+						{% csrf_token %}
+
+						<button type="button" data-value="Factory Business Prediction" class="btn btn-outline-primary booknow" id="">
+							Book Now
+						</button>
+					</form>
+					{% else %}
+					<a href="/" class="btn btn-outline-primary ">
+						Login
+					</a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<div class="mar col-md-1">&nbsp;</div>
+	</div>
+	<div class="row">
+		<div class="mar col-md-1">&nbsp;</div>
+		<div class="mar col-md-3">
+			<img class="service-img" src="{% static 'Images/rudrakshya.jpg' %}">
+		</div>
+		<div class="mar col-md-1">
+			<div class="v1"> </div>
+		</div>
+		<div class="mar col-md-6">
+			<h3 class="text-center text-capitalize">Business Growth Plan</h3>
+			<hr class="w-25 mx-auto">
+			<p class="text-justify">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<div class="pt-3">
+				<div class="container">
+					{% if user.is_authenticated %}
+					<form class="service-book" method="POST" id="service-book">
+						{% csrf_token %}
+						<button type="button" data-value="Business Growth plan prediction" class="btn btn-outline-primary booknow" id="">
+							Book Now
+						</button>
+					</form>
+					{% else %}
+					<a href="/" class="btn btn-outline-primary ">
+						Login
+					</a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<div class="mar col-md-1">&nbsp;</div>
+	</div>
+</div>
+{% endblock %}
+{% block modal %}
+<div class="modal fade" id="bookModal" data-backdrop="false">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<h2 class="modal-title"><br /><b>Do you want to confirm your bookings?</b></h2>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body text-center" style="min-width:100%">
+				<b class="">Press OK to confirm.</b>
+				<!-- Modal footer -->
+				<div class="modal-footer">
+					<a href="#" class="btn btn-light" id="btnOk" data-value="">OK</a>
+					<button type="button" class="btn btn-light" id="btnCancel" data-dismiss="modal">Cancel</button>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{% static 'notify.js' %}"></script>
+<script>
+    $(document).ready(function e() {
+        console.log("loaded");
+    })
+    $('#btnCancel').click(function e() {
+        $(document).ready(function () {
+            setTimeout(function () {
+
+                location.reload(true);
+            }, 100);
+        });
+    })
+    $('#btnOk').click(function e() {
+        var jData = "{{ csrf_token }}";
+		var value = $(this).data('value');
+
+        $.ajax({
+            type: "POST",
+            url: "{% url 'servicebook' %}",
+
+            dataType: "json",
+
+            data: { csrfmiddlewaretoken: jData, 'hidden': value },
+            success: function (data) {
+                console.log(data);
+                $.notify("Access granted", "success");
+            },
+            failure: function (errMsg) {
+                $.notify("Failed", "error");
+            }
+        });
+        $(document).ready(function () {
+            setTimeout(function () {
+
+                location.reload(true);
+            }, 100);
+
+        });
+        $("#bookModal").modal("hide");
+    })
+    $('.booknow').click(function e() {
+        var jData = "{{ csrf_token }}";
+        var value = $(this).data('value');
+        $('.btn').attr('data-value', value);
+            $("#bookModal").modal("show")
+    });
+</script>
+{% endblock %}

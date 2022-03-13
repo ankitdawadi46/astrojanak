@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>JanakBhatta</Name>
+    <RootNamespace>JanakBhatta</RootNamespace>
+    <TestFramework>Pytest</TestFramework>
+    <InterpreterId>MSBuild|Python 3.8|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>6700c16a-e2c7-4f19-8a31-fd9f378e55b3</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>JanakBhatta.settings</DjangoSettingsModule>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app\forms.py" />
+    <Compile Include="app\models.py" />
+    <Compile Include="app\tests.py" />
+    <Compile Include="app\views.py" />
+    <Compile Include="app\__init__.py" />
+    <Compile Include="app\migrations\__init__.py" />
+    <Compile Include="blog\admin.py" />
+    <Compile Include="blog\apps.py" />
+    <Compile Include="blog\migrations\0001_initial.py" />
+    <Compile Include="blog\migrations\0002_blogs_slug.py" />
+    <Compile Include="blog\migrations\0003_auto_20200709_1341.py" />
+    <Compile Include="blog\migrations\__init__.py" />
+    <Compile Include="blog\models.py" />
+    <Compile Include="blog\tests.py" />
+    <Compile Include="blog\urls.py" />
+    <Compile Include="blog\views.py" />
+    <Compile Include="blog\__init__.py" />
+    <Compile Include="contact\admin.py" />
+    <Compile Include="contact\apps.py" />
+    <Compile Include="contact\migrations\0001_initial.py" />
+    <Compile Include="contact\migrations\__init__.py" />
+    <Compile Include="contact\models.py" />
+    <Compile Include="contact\tests.py" />
+    <Compile Include="contact\urls.py" />
+    <Compile Include="contact\views.py" />
+    <Compile Include="contact\__init__.py" />
+    <Compile Include="home\admin.py" />
+    <Compile Include="home\apps.py" />
+    <Compile Include="home\forms.py" />
+    <Compile Include="home\migrations\0001_initial.py" />
+    <Compile Include="home\migrations\0002_delete_profile.py" />
+    <Compile Include="home\migrations\0003_profile.py" />
+    <Compile Include="home\migrations\0004_delete_profile.py" />
+    <Compile Include="home\migrations\0005_webusers.py" />
+    <Compile Include="home\migrations\0006_auto_20200723_1510.py" />
+    <Compile Include="home\migrations\0007_auto_20200723_1511.py" />
+    <Compile Include="home\migrations\0008_auto_20200726_1627.py" />
+    <Compile Include="home\migrations\__init__.py" />
+    <Compile Include="home\models.py" />
+    <Compile Include="home\tests.py" />
+    <Compile Include="home\urls.py" />
+    <Compile Include="home\views.py" />
+    <Compile Include="home\__init__.py" />
+    <Compile Include="horoscope\admin.py" />
+    <Compile Include="horoscope\apps.py" />
+    <Compile Include="horoscope\migrations\0001_initial.py" />
+    <Compile Include="horoscope\migrations\0002_auto_20200726_1634.py" />
+    <Compile Include="horoscope\migrations\0003_horoscope1_date_added.py" />
+    <Compile Include="horoscope\migrations\0004_auto_20200726_1813.py" />
+    <Compile Include="horoscope\migrations\__init__.py" />
+    <Compile Include="horoscope\models.py" />
+    <Compile Include="horoscope\tests.py" />
+    <Compile Include="horoscope\urls.py" />
+    <Compile Include="horoscope\views.py" />
+    <Compile Include="horoscope\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="JanakBhatta\__init__.py" />
+    <Compile Include="JanakBhatta\settings.py" />
+    <Compile Include="JanakBhatta\urls.py" />
+    <Compile Include="JanakBhatta\wsgi.py" />
+    <Compile Include="services\admin.py" />
+    <Compile Include="services\apps.py" />
+    <Compile Include="services\migrations\0001_initial.py" />
+    <Compile Include="services\migrations\__init__.py" />
+    <Compile Include="services\models.py" />
+    <Compile Include="services\tests.py" />
+    <Compile Include="services\urls.py" />
+    <Compile Include="services\views.py" />
+    <Compile Include="services\__init__.py" />
+    <Compile Include="shop\admin.py" />
+    <Compile Include="shop\apps.py" />
+    <Compile Include="shop\migrations\0001_initial.py" />
+    <Compile Include="shop\migrations\0002_delete_blogs.py" />
+    <Compile Include="shop\migrations\0003_products.py" />
+    <Compile Include="shop\migrations\0004_auto_20200716_1634.py" />
+    <Compile Include="shop\migrations\0005_auto_20200716_1654.py" />
+    <Compile Include="shop\migrations\0006_auto_20200716_1700.py" />
+    <Compile Include="shop\migrations\0007_auto_20200716_1706.py" />
+    <Compile Include="shop\migrations\0008_auto_20200717_1546.py" />
+    <Compile Include="shop\migrations\0009_auto_20200719_1826.py" />
+    <Compile Include="shop\migrations\0010_auto_20200719_1903.py" />
+    <Compile Include="shop\migrations\0011_auto_20200720_1155.py" />
+    <Compile Include="shop\migrations\0012_auto_20200720_1444.py" />
+    <Compile Include="shop\migrations\0013_auto_20200810_1824.py" />
+    <Compile Include="shop\migrations\__init__.py" />
+    <Compile Include="shop\models.py" />
+    <Compile Include="shop\tests.py" />
+    <Compile Include="shop\urls.py" />
+    <Compile Include="shop\utils.py" />
+    <Compile Include="shop\views.py" />
+    <Compile Include="shop\__init__.py" />
+    <Compile Include="videos\admin.py" />
+    <Compile Include="videos\apps.py" />
+    <Compile Include="videos\migrations\0001_initial.py" />
+    <Compile Include="videos\migrations\0002_auto_20200707_1341.py" />
+    <Compile Include="videos\migrations\0003_videos_updated_on.py" />
+    <Compile Include="videos\migrations\__init__.py" />
+    <Compile Include="videos\models.py" />
+    <Compile Include="videos\tests.py" />
+    <Compile Include="videos\urls.py" />
+    <Compile Include="videos\views.py" />
+    <Compile Include="videos\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="app\migrations\" />
+    <Folder Include="app\static\" />
+    <Folder Include="app\static\app\" />
+    <Folder Include="app\static\app\content\" />
+    <Folder Include="app\static\app\fonts\" />
+    <Folder Include="app\static\app\scripts\" />
+    <Folder Include="app\templates\" />
+    <Folder Include="app\templates\app\" />
+    <Folder Include="assets\" />
+    <Folder Include="assets\admin\" />
+    <Folder Include="assets\admin\css\" />
+    <Folder Include="assets\admin\css\vendor\" />
+    <Folder Include="assets\admin\css\vendor\select2\" />
+    <Folder Include="assets\admin\fonts\" />
+    <Folder Include="assets\admin\img\" />
+    <Folder Include="assets\admin\img\gis\" />
+    <Folder Include="assets\admin\js\" />
+    <Folder Include="assets\admin\js\admin\" />
+    <Folder Include="assets\admin\js\vendor\" />
+    <Folder Include="assets\admin\js\vendor\jquery\" />
+    <Folder Include="assets\admin\js\vendor\select2\" />
+    <Folder Include="assets\admin\js\vendor\select2\i18n\" />
+    <Folder Include="assets\admin\js\vendor\xregexp\" />
+    <Folder Include="assets\app\" />
+    <Folder Include="assets\app\content\" />
+    <Folder Include="assets\app\fonts\" />
+    <Folder Include="assets\app\scripts\" />
+    <Folder Include="assets\Images\" />
+    <Folder Include="assets\Images\rashi\" />
+    <Folder Include="assets\Images\rudra\" />
+    <Folder Include="assets\js\" />
+    <Folder Include="assets\style\" />
+    <Folder Include="assets\Videos\" />
+    <Folder Include="blog\" />
+    <Folder Include="blog\migrations\" />
+    <Folder Include="blog\migrations\__pycache__\" />
+    <Folder Include="blog\__pycache__\" />
+    <Folder Include="contact\" />
+    <Folder Include="contact\migrations\" />
+    <Folder Include="contact\migrations\__pycache__\" />
+    <Folder Include="contact\__pycache__\" />
+    <Folder Include="home\" />
+    <Folder Include="home\migrations\" />
+    <Folder Include="home\migrations\__pycache__\" />
+    <Folder Include="home\__pycache__\" />
+    <Folder Include="horoscope\" />
+    <Folder Include="horoscope\migrations\" />
+    <Folder Include="horoscope\migrations\__pycache__\" />
+    <Folder Include="horoscope\__pycache__\" />
+    <Folder Include="JanakBhatta\" />
+    <Folder Include="media\" />
+    <Folder Include="media\blog_image\" />
+    <Folder Include="services\" />
+    <Folder Include="services\migrations\" />
+    <Folder Include="services\migrations\__pycache__\" />
+    <Folder Include="services\__pycache__\" />
+    <Folder Include="shop\" />
+    <Folder Include="shop\migrations\" />
+    <Folder Include="shop\migrations\__pycache__\" />
+    <Folder Include="shop\__pycache__\" />
+    <Folder Include="static\" />
+    <Folder Include="static\admin\" />
+    <Folder Include="static\admin\css\" />
+    <Folder Include="static\admin\css\vendor\" />
+    <Folder Include="static\admin\css\vendor\select2\" />
+    <Folder Include="static\admin\fonts\" />
+    <Folder Include="static\admin\img\" />
+    <Folder Include="static\admin\img\gis\" />
+    <Folder Include="static\admin\js\" />
+    <Folder Include="static\admin\js\admin\" />
+    <Folder Include="static\admin\js\vendor\" />
+    <Folder Include="static\admin\js\vendor\jquery\" />
+    <Folder Include="static\admin\js\vendor\select2\" />
+    <Folder Include="static\admin\js\vendor\select2\i18n\" />
+    <Folder Include="static\admin\js\vendor\xregexp\" />
+    <Folder Include="static\app\" />
+    <Folder Include="static\app\content\" />
+    <Folder Include="static\app\fonts\" />
+    <Folder Include="static\app\scripts\" />
+    <Folder Include="static\Images\" />
+    <Folder Include="static\Images\rashi\" />
+    <Folder Include="static\Images\rudra\" />
+    <Folder Include="static\js\" />
+    <Folder Include="static\style\" />
+    <Folder Include="static\Videos\" />
+    <Folder Include="templates\" />
+    <Folder Include="templates\blog\" />
+    <Folder Include="templates\registration\" />
+    <Folder Include="videos\" />
+    <Folder Include="videos\migrations\" />
+    <Folder Include="videos\migrations\__pycache__\" />
+    <Folder Include="videos\__pycache__\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\admin\css\autocomplete.css" />
+    <Content Include="assets\admin\css\base.css" />
+    <Content Include="assets\admin\css\changelists.css" />
+    <Content Include="assets\admin\css\dashboard.css" />
+    <Content Include="assets\admin\css\fonts.css" />
+    <Content Include="assets\admin\css\forms.css" />
+    <Content Include="assets\admin\css\login.css" />
+    <Content Include="assets\admin\css\responsive.css" />
+    <Content Include="assets\admin\css\responsive_rtl.css" />
+    <Content Include="assets\admin\css\rtl.css" />
+    <Content Include="assets\admin\css\vendor\select2\LICENSE-SELECT2.md" />
+    <Content Include="assets\admin\css\vendor\select2\select2.css" />
+    <Content Include="assets\admin\css\vendor\select2\select2.min.css" />
+    <Content Include="assets\admin\css\widgets.css" />
+    <Content Include="assets\admin\fonts\LICENSE.txt" />
+    <Content Include="assets\admin\fonts\README.txt" />
+    <Content Include="assets\admin\fonts\Roboto-Bold-webfont.woff" />
+    <Content Include="assets\admin\fonts\Roboto-Light-webfont.woff" />
+    <Content Include="assets\admin\fonts\Roboto-Regular-webfont.woff" />
+    <Content Include="assets\admin\img\calendar-icons.svg" />
+    <Content Include="assets\admin\img\gis\move_vertex_off.svg" />
+    <Content Include="assets\admin\img\gis\move_vertex_on.svg" />
+    <Content Include="assets\admin\img\icon-addlink.svg" />
+    <Content Include="assets\admin\img\icon-alert.svg" />
+    <Content Include="assets\admin\img\icon-calendar.svg" />
+    <Content Include="assets\admin\img\icon-changelink.svg" />
+    <Content Include="assets\admin\img\icon-clock.svg" />
+    <Content Include="assets\admin\img\icon-deletelink.svg" />
+    <Content Include="assets\admin\img\icon-no.svg" />
+    <Content Include="assets\admin\img\icon-unknown-alt.svg" />
+    <Content Include="assets\admin\img\icon-unknown.svg" />
+    <Content Include="assets\admin\img\icon-viewlink.svg" />
+    <Content Include="assets\admin\img\icon-yes.svg" />
+    <Content Include="assets\admin\img\inline-delete.svg" />
+    <Content Include="assets\admin\img\LICENSE" />
+    <Content Include="assets\admin\img\README.txt" />
+    <Content Include="assets\admin\img\search.svg" />
+    <Content Include="assets\admin\img\selector-icons.svg" />
+    <Content Include="assets\admin\img\sorting-icons.svg" />
+    <Content Include="assets\admin\img\tooltag-add.svg" />
+    <Content Include="assets\admin\img\tooltag-arrowright.svg" />
+    <Content Include="assets\admin\js\actions.js" />
+    <Content Include="assets\admin\js\actions.min.js" />
+    <Content Include="assets\admin\js\admin\DateTimeShortcuts.js" />
+    <Content Include="assets\admin\js\admin\RelatedObjectLookups.js" />
+    <Content Include="assets\admin\js\autocomplete.js" />
+    <Content Include="assets\admin\js\calendar.js" />
+    <Content Include="assets\admin\js\cancel.js" />
+    <Content Include="assets\admin\js\change_form.js" />
+    <Content Include="assets\admin\js\collapse.js" />
+    <Content Include="assets\admin\js\collapse.min.js" />
+    <Content Include="assets\admin\js\core.js" />
+    <Content Include="assets\admin\js\inlines.js" />
+    <Content Include="assets\admin\js\inlines.min.js" />
+    <Content Include="assets\admin\js\jquery.init.js" />
+    <Content Include="assets\admin\js\popup_response.js" />
+    <Content Include="assets\admin\js\prepopulate.js" />
+    <Content Include="assets\admin\js\prepopulate.min.js" />
+    <Content Include="assets\admin\js\prepopulate_init.js" />
+    <Content Include="assets\admin\js\SelectBox.js" />
+    <Content Include="assets\admin\js\SelectFilter2.js" />
+    <Content Include="assets\admin\js\timeparse.js" />
+    <Content Include="assets\admin\js\urlify.js" />
+    <Content Include="assets\admin\js\vendor\jquery\jquery.js" />
+    <Content Include="assets\admin\js\vendor\jquery\jquery.min.js" />
+    <Content Include="assets\admin\js\vendor\jquery\LICENSE.txt" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\af.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\ar.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\az.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\bg.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\bn.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\bs.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\ca.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\cs.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\da.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\de.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\dsb.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\el.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\en.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\es.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\et.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\eu.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\fa.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\fi.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\fr.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\gl.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\he.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\hi.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\hr.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\hsb.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\hu.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\hy.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\id.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\is.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\it.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\ja.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\ka.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\km.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\ko.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\lt.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\lv.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\mk.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\ms.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\nb.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\ne.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\nl.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\pl.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\ps.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\pt-BR.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\pt.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\ro.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\ru.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\sk.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\sl.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\sq.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\sr-Cyrl.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\sr.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\sv.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\th.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\tk.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\tr.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\uk.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\vi.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\zh-CN.js" />
+    <Content Include="assets\admin\js\vendor\select2\i18n\zh-TW.js" />
+    <Content Include="assets\admin\js\vendor\select2\LICENSE.md" />
+    <Content Include="assets\admin\js\vendor\select2\select2.full.js" />
+    <Content Include="assets\admin\js\vendor\select2\select2.full.min.js" />
+    <Content Include="assets\admin\js\vendor\xregexp\LICENSE.txt" />
+    <Content Include="assets\admin\js\vendor\xregexp\xregexp.js" />
+    <Content Include="assets\admin\js\vendor\xregexp\xregexp.min.js" />
+    <Content Include="assets\app\content\bootstrap.css" />
+    <Content Include="assets\app\content\bootstrap.min.css" />
+    <Content Include="assets\app\content\site.css" />
+    <Content Include="assets\app\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\app\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\app\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\app\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="services\migrations\__pycache__\0001_initial.cpython-38.pyc" />
+    <Content Include="services\migrations\__pycache__\__init__.cpython-38.pyc" />
+    <Content Include="services\__pycache__\admin.cpython-38.pyc" />
+    <Content Include="services\__pycache__\models.cpython-38.pyc" />
+    <Content Include="services\__pycache__\urls.cpython-38.pyc" />
+    <Content Include="services\__pycache__\views.cpython-38.pyc" />
+    <Content Include="services\__pycache__\__init__.cpython-38.pyc" />
+    <Content Include="shop\migrations\__pycache__\0001_initial.cpython-38.pyc" />
+    <Content Include="shop\migrations\__pycache__\0002_delete_blogs.cpython-38.pyc" />
+    <Content Include="shop\migrations\__pycache__\0003_products.cpython-38.pyc" />
+    <Content Include="shop\migrations\__pycache__\0004_auto_20200716_1634.cpython-38.pyc" />
+    <Content Include="shop\migrations\__pycache__\0005_auto_20200716_1654.cpython-38.pyc" />
+    <Content Include="shop\migrations\__pycache__\0006_auto_20200716_1700.cpython-38.pyc" />
+    <Content Include="shop\migrations\__pycache__\0007_auto_20200716_1706.cpython-38.pyc" />
+    <Content Include="shop\migrations\__pycache__\0008_auto_20200717_1546.cpython-38.pyc" />
+    <Content Include="shop\migrations\__pycache__\0009_auto_20200719_1826.cpython-38.pyc" />
+    <Content Include="shop\migrations\__pycache__\0010_auto_20200719_1903.cpython-38.pyc" />
+    <Content Include="shop\migrations\__pycache__\0011_auto_20200720_1155.cpython-38.pyc" />
+    <Content Include="shop\migrations\__pycache__\0012_auto_20200720_1444.cpython-38.pyc" />
+    <Content Include="shop\migrations\__pycache__\0013_auto_20200810_1824.cpython-38.pyc" />
+    <Content Include="shop\migrations\__pycache__\__init__.cpython-38.pyc" />
+    <Content Include="shop\__pycache__\admin.cpython-38.pyc" />
+    <Content Include="shop\__pycache__\models.cpython-38.pyc" />
+    <Content Include="shop\__pycache__\urls.cpython-38.pyc" />
+    <Content Include="shop\__pycache__\utils.cpython-38.pyc" />
+    <Content Include="shop\__pycache__\views.cpython-38.pyc" />
+    <Content Include="shop\__pycache__\__init__.cpython-38.pyc" />
+    <Content Include="static\admin\css\autocomplete.css" />
+    <Content Include="static\admin\css\base.css" />
+    <Content Include="static\admin\css\changelists.css" />
+    <Content Include="static\admin\css\dashboard.css" />
+    <Content Include="static\admin\css\fonts.css" />
+    <Content Include="static\admin\css\forms.css" />
+    <Content Include="static\admin\css\login.css" />
+    <Content Include="static\admin\css\responsive.css" />
+    <Content Include="static\admin\css\responsive_rtl.css" />
+    <Content Include="static\admin\css\rtl.css" />
+    <Content Include="static\admin\css\vendor\select2\LICENSE-SELECT2.md" />
+    <Content Include="static\admin\css\vendor\select2\select2.css" />
+    <Content Include="static\admin\css\vendor\select2\select2.min.css" />
+    <Content Include="static\admin\css\widgets.css" />
+    <Content Include="static\admin\fonts\LICENSE.txt" />
+    <Content Include="static\admin\fonts\README.txt" />
+    <Content Include="static\admin\fonts\Roboto-Bold-webfont.woff" />
+    <Content Include="static\admin\fonts\Roboto-Light-webfont.woff" />
+    <Content Include="static\admin\fonts\Roboto-Regular-webfont.woff" />
+    <Content Include="static\admin\img\calendar-icons.svg" />
+    <Content Include="static\admin\img\gis\move_vertex_off.svg" />
+    <Content Include="static\admin\img\gis\move_vertex_on.svg" />
+    <Content Include="static\admin\img\icon-addlink.svg" />
+    <Content Include="static\admin\img\icon-alert.svg" />
+    <Content Include="static\admin\img\icon-calendar.svg" />
+    <Content Include="static\admin\img\icon-changelink.svg" />
+    <Content Include="static\admin\img\icon-clock.svg" />
+    <Content Include="static\admin\img\icon-deletelink.svg" />
+    <Content Include="static\admin\img\icon-no.svg" />
+    <Content Include="static\admin\img\icon-unknown-alt.svg" />
+    <Content Include="static\admin\img\icon-unknown.svg" />
+    <Content Include="static\admin\img\icon-viewlink.svg" />
+    <Content Include="static\admin\img\icon-yes.svg" />
+    <Content Include="static\admin\img\inline-delete.svg" />
+    <Content Include="static\admin\img\LICENSE" />
+    <Content Include="static\admin\img\README.txt" />
+    <Content Include="static\admin\img\search.svg" />
+    <Content Include="static\admin\img\selector-icons.svg" />
+    <Content Include="static\admin\img\sorting-icons.svg" />
+    <Content Include="static\admin\img\tooltag-add.svg" />
+    <Content Include="static\admin\img\tooltag-arrowright.svg" />
+    <Content Include="static\admin\js\actions.js" />
+    <Content Include="static\admin\js\actions.min.js" />
+    <Content Include="static\admin\js\admin\DateTimeShortcuts.js" />
+    <Content Include="static\admin\js\admin\RelatedObjectLookups.js" />
+    <Content Include="static\admin\js\autocomplete.js" />
+    <Content Include="static\admin\js\calendar.js" />
+    <Content Include="static\admin\js\cancel.js" />
+    <Content Include="static\admin\js\change_form.js" />
+    <Content Include="static\admin\js\collapse.js" />
+    <Content Include="static\admin\js\collapse.min.js" />
+    <Content Include="static\admin\js\core.js" />
+    <Content Include="static\admin\js\inlines.js" />
+    <Content Include="static\admin\js\inlines.min.js" />
+    <Content Include="static\admin\js\jquery.init.js" />
+    <Content Include="static\admin\js\popup_response.js" />
+    <Content Include="static\admin\js\prepopulate.js" />
+    <Content Include="static\admin\js\prepopulate.min.js" />
+    <Content Include="static\admin\js\prepopulate_init.js" />
+    <Content Include="static\admin\js\SelectBox.js" />
+    <Content Include="static\admin\js\SelectFilter2.js" />
+    <Content Include="static\admin\js\urlify.js" />
+    <Content Include="static\admin\js\vendor\jquery\jquery.js" />
+    <Content Include="static\admin\js\vendor\jquery\jquery.min.js" />
+    <Content Include="static\admin\js\vendor\jquery\LICENSE.txt" />
+    <Content Include="static\admin\js\vendor\select2\i18n\af.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\ar.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\az.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\bg.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\bn.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\bs.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\ca.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\cs.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\da.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\de.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\dsb.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\el.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\en.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\es.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\et.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\eu.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\fa.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\fi.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\fr.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\gl.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\he.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\hi.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\hr.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\hsb.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\hu.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\hy.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\id.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\is.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\it.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\ja.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\ka.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\km.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\ko.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\lt.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\lv.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\mk.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\ms.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\nb.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\ne.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\nl.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\pl.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\ps.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\pt-BR.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\pt.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\ro.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\ru.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\sk.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\sl.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\sq.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\sr-Cyrl.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\sr.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\sv.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\th.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\tk.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\tr.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\uk.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\vi.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\zh-CN.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\zh-TW.js" />
+    <Content Include="static\admin\js\vendor\select2\LICENSE.md" />
+    <Content Include="static\admin\js\vendor\select2\select2.full.js" />
+    <Content Include="static\admin\js\vendor\select2\select2.full.min.js" />
+    <Content Include="static\admin\js\vendor\xregexp\LICENSE.txt" />
+    <Content Include="static\admin\js\vendor\xregexp\xregexp.js" />
+    <Content Include="static\admin\js\vendor\xregexp\xregexp.min.js" />
+    <Content Include="static\app\content\bootstrap.css" />
+    <Content Include="static\app\content\bootstrap.min.css" />
+    <Content Include="static\app\content\site.css" />
+    <Content Include="static\app\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="static\app\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="static\app\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="static\app\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="static\app\scripts\bootstrap.js" />
+    <Content Include="static\app\scripts\bootstrap.min.js" />
+    <Content Include="static\app\scripts\modernizr-2.6.2.js" />
+    <Content Include="static\app\scripts\respond.js" />
+    <Content Include="static\app\scripts\respond.min.js" />
+    <Content Include="static\cream.jpg" />
+    <Content Include="static\Images\a.jpg" />
+    <Content Include="static\Images\b.png" />
+    <Content Include="static\Images\bastuyantra.jpg" />
+    <Content Include="static\Images\business_paramarsa.jpg" />
+    <Content Include="static\Images\byapar_paramarsa.jpg" />
+    <Content Include="static\Images\c.jpg" />
+    <Content Include="static\Images\car1.jpg" />
+    <Content Include="static\Images\car2.jpg" />
+    <Content Include="static\Images\car3.jpg" />
+    <Content Include="static\Images\car4.jpg" />
+    <Content Include="static\Images\china_nirman_process.jpg" />
+    <Content Include="static\Images\contact.jpg" />
+    <Content Include="static\Images\cream.jpg" />
+    <Content Include="static\Images\d.jpg" />
+    <Content Include="static\Images\e.png" />
+    <Content Include="static\Images\education_paramarsa.jpg" />
+    <Content Include="static\Images\f.png" />
+    <Content Include="static\Images\facebook.png" />
+    <Content Include="static\Images\galaxy.jpg" />
+    <Content Include="static\Images\gemstone.jpg" />
+    <Content Include="static\Images\griha_vastu.jpg" />
+    <Content Include="static\Images\hawan.jpg" />
+    <Content Include="static\Images\health_paramarsa.jpg" />
+    <Content Include="static\Images\hospital_vastu.jpg" />
+    <Content Include="static\Images\insta.png" />
+    <Content Include="static\Images\JanakBhatta.jpeg" />
+    <Content Include="static\Images\janam_kundali.jpg" />
+    <Content Include="static\Images\janma_kundali.JPG" />
+    <Content Include="static\Images\location.png" />
+    <Content Include="static\Images\logo.png" />
+    <Content Include="static\Images\mala.jpg" />
+    <Content Include="static\Images\marriage_paramarsa.jpg" />
+    <Content Include="static\Images\my_photo.jpg" />
+    <Content Include="static\Images\navagraha.jpg" />
+    <Content Include="static\Images\navaratna.jpg" />
+    <Content Include="static\Images\pasal_vastu.jpg" />
+    <Content Include="static\Images\rashi\brischik.png" />
+    <Content Include="static\Images\rashi\brish.png" />
+    <Content Include="static\Images\rashi\dhanu.png" />
+    <Content Include="static\Images\rashi\kanya.png" />
+    <Content Include="static\Images\rashi\karkat.png" />
+    <Content Include="static\Images\rashi\kumbha.png" />
+    <Content Include="static\Images\rashi\makar.png" />
+    <Content Include="static\Images\rashi\mesh.png" />
+    <Content Include="static\Images\rashi\min.png" />
+    <Content Include="static\Images\rashi\mithun.png" />
+    <Content Include="static\Images\rashi\singha.png" />
+    <Content Include="static\Images\rashi\tula.png" />
+    <Content Include="static\Images\rudrakshya.jpg" />
+    <Content Include="static\Images\rudra\rudra1.jpg" />
+    <Content Include="static\Images\rudripath.jpg" />
+    <Content Include="static\Images\school_vastu.jpg" />
+    <Content Include="static\Images\shubha_ranga.jpg" />
+    <Content Include="static\Images\tippan.jpg" />
+    <Content Include="static\Images\tippan_nirman.jpg" />
+    <Content Include="static\Images\twitter.png" />
+    <Content Include="static\Images\udhyog_vastu.jpg" />
+    <Content Include="static\Images\vastu-heading.jpg" />
+    <Content Include="static\js\jquery.ba-hashchange.min.js" />
+    <Content Include="static\notify.js" />
+    <Content Include="static\style.css" />
+    <Content Include="static\style1.css" />
+    <Content Include="static\style\style.css" />
+    <Content Include="static\Videos\Success_schwarz.mp4" />
+    <Content Include="static\ytmultiple.js" />
+    <Content Include="templates\base.html" />
+    <Content Include="templates\bastu paramarsa.html" />
+    <Content Include="templates\bhabishya_fal_kathan.html" />
+    <Content Include="templates\blog\blogs_list.html" />
+    <Content Include="templates\Business Prediction.html" />
+    <Content Include="templates\gem.html" />
+    <Content Include="templates\gemcard.html" />
+    <Content Include="templates\Graha Shanti.html" />
+    <Content Include="templates\header.html" />
+    <Content Include="templates\horoscope.html" />
+    <Content Include="templates\index %282%29.html" />
+    <Content Include="templates\index.html" />
+    <Content Include="templates\insideblog.html" />
+    <Content Include="templates\janma kundali.html" />
+    <Content Include="templates\loggedin.html" />
+    <Content Include="templates\register.html" />
+    <Content Include="templates\register1.html" />
+    <Content Include="templates\registration\login.html" />
+    <Content Include="templates\registration\password_reset_complete.html" />
+    <Content Include="templates\registration\password_reset_form.html" />
+    <Content Include="templates\registration\password_reset_input.html" />
+    <Content Include="templates\registration\password_reset_sent.html" />
+    <Content Include="templates\registration\register1.html" />
+    <Content Include="templates\rudracard.html" />
+    <Content Include="templates\rudrakshya.html" />
+    <Content Include="templates\shop.html" />
+    <Content Include="templates\vastu.html" />
+    <Content Include="templates\vastucard.html" />
+    <Content Include="templates\videos.html" />
+    <Content Include="videos\migrations\__pycache__\0001_initial.cpython-38.pyc" />
+    <Content Include="videos\migrations\__pycache__\0002_auto_20200707_1341.cpython-38.pyc" />
+    <Content Include="videos\migrations\__pycache__\0003_videos_updated_on.cpython-38.pyc" />
+    <Content Include="videos\migrations\__pycache__\__init__.cpython-38.pyc" />
+    <Content Include="videos\__pycache__\admin.cpython-38.pyc" />
+    <Content Include="videos\__pycache__\apps.cpython-38.pyc" />
+    <Content Include="videos\__pycache__\models.cpython-38.pyc" />
+    <Content Include="videos\__pycache__\urls.cpython-38.pyc" />
+    <Content Include="videos\__pycache__\views.cpython-38.pyc" />
+    <Content Include="videos\__pycache__\__init__.cpython-38.pyc" />
+    <None Include="static\app\scripts\jquery.validate-vsdoc.js" />
+    <None Include="static\app\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="static\app\scripts\jquery-1.10.2.js" />
+    <Content Include="static\app\scripts\jquery-1.10.2.min.js" />
+    <Content Include="static\app\scripts\jquery-1.10.2.min.map" />
+    <Content Include="static\app\scripts\jquery.validate.js" />
+    <Content Include="static\app\scripts\jquery.validate.min.js" />
+    <Content Include="static\app\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="static\app\scripts\jquery.validate.unobtrusive.min.js" />
+    <None Include="static\app\scripts\_references.js" />
+    <None Include="assets\app\scripts\_references.js" />
+    <Content Include="assets\app\scripts\bootstrap.js" />
+    <Content Include="assets\app\scripts\bootstrap.min.js" />
+    <None Include="assets\app\scripts\jquery.validate-vsdoc.js" />
+    <None Include="assets\app\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="assets\app\scripts\jquery-1.10.2.js" />
+    <Content Include="assets\app\scripts\jquery-1.10.2.min.js" />
+    <Content Include="assets\app\scripts\jquery-1.10.2.min.map" />
+    <Content Include="assets\app\scripts\jquery.validate.js" />
+    <Content Include="assets\app\scripts\jquery.validate.min.js" />
+    <Content Include="assets\app\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="assets\app\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="assets\app\scripts\modernizr-2.6.2.js" />
+    <Content Include="assets\app\scripts\respond.js" />
+    <Content Include="assets\app\scripts\respond.min.js" />
+    <Content Include="assets\cream.jpg" />
+    <Content Include="assets\Images\a.jpg" />
+    <Content Include="assets\Images\b.png" />
+    <Content Include="assets\Images\bastuyantra.jpg" />
+    <Content Include="assets\Images\c.jpg" />
+    <Content Include="assets\Images\car1.jpg" />
+    <Content Include="assets\Images\car2.jpg" />
+    <Content Include="assets\Images\car3.jpg" />
+    <Content Include="assets\Images\contact.jpg" />
+    <Content Include="assets\Images\cream.jpg" />
+    <Content Include="assets\Images\d.jpg" />
+    <Content Include="assets\Images\e.png" />
+    <Content Include="assets\Images\f.png" />
+    <Content Include="assets\Images\facebook.png" />
+    <Content Include="assets\Images\galaxy.jpg" />
+    <Content Include="assets\Images\gemstone.jpg" />
+    <Content Include="assets\Images\insta.png" />
+    <Content Include="assets\Images\location.png" />
+    <Content Include="assets\Images\mala.jpg" />
+    <Content Include="assets\Images\rashi\brischik.png" />
+    <Content Include="assets\Images\rashi\brish.png" />
+    <Content Include="assets\Images\rashi\dhanu.png" />
+    <Content Include="assets\Images\rashi\kanya.png" />
+    <Content Include="assets\Images\rashi\karkat.png" />
+    <Content Include="assets\Images\rashi\kumbha.png" />
+    <Content Include="assets\Images\rashi\makar.png" />
+    <Content Include="assets\Images\rashi\mesh.png" />
+    <Content Include="assets\Images\rashi\min.png" />
+    <Content Include="assets\Images\rashi\mithun.png" />
+    <Content Include="assets\Images\rashi\singha.png" />
+    <Content Include="assets\Images\rashi\tula.png" />
+    <Content Include="assets\Images\rudrakshya.jpg" />
+    <Content Include="assets\Images\rudra\rudra1.jpg" />
+    <Content Include="assets\Images\twitter.png" />
+    <Content Include="assets\js\jquery.ba-hashchange.min.js" />
+    <Content Include="assets\notify.js" />
+    <Content Include="assets\style.css" />
+    <Content Include="assets\style\style.css" />
+    <Content Include="assets\Videos\Success_schwarz.mp4" />
+    <Content Include="assets\ytmultiple.js" />
+    <Content Include="blog\migrations\__pycache__\0001_initial.cpython-38.pyc" />
+    <Content Include="blog\migrations\__pycache__\0002_auto_20200705_1400.cpython-38.pyc" />
+    <Content Include="blog\migrations\__pycache__\0002_blogs_slug.cpython-38.pyc" />
+    <Content Include="blog\migrations\__pycache__\0003_auto_20200705_1520.cpython-38.pyc" />
+    <Content Include="blog\migrations\__pycache__\0003_auto_20200709_1341.cpython-38.pyc" />
+    <Content Include="blog\migrations\__pycache__\__init__.cpython-38.pyc" />
+    <Content Include="blog\__pycache__\admin.cpython-38.pyc" />
+    <Content Include="blog\__pycache__\apps.cpython-38.pyc" />
+    <Content Include="blog\__pycache__\models.cpython-38.pyc" />
+    <Content Include="blog\__pycache__\urls.cpython-38.pyc" />
+    <Content Include="blog\__pycache__\views.cpython-38.pyc" />
+    <Content Include="blog\__pycache__\__init__.cpython-38.pyc" />
+    <Content Include="contact\migrations\__pycache__\0001_initial.cpython-38.pyc" />
+    <Content Include="contact\migrations\__pycache__\__init__.cpython-38.pyc" />
+    <Content Include="contact\__pycache__\admin.cpython-38.pyc" />
+    <Content Include="contact\__pycache__\apps.cpython-38.pyc" />
+    <Content Include="contact\__pycache__\models.cpython-38.pyc" />
+    <Content Include="contact\__pycache__\urls.cpython-38.pyc" />
+    <Content Include="contact\__pycache__\views.cpython-38.pyc" />
+    <Content Include="contact\__pycache__\__init__.cpython-38.pyc" />
+    <Content Include="home\migrations\__pycache__\0001_initial.cpython-38.pyc" />
+    <Content Include="home\migrations\__pycache__\0002_delete_profile.cpython-38.pyc" />
+    <Content Include="home\migrations\__pycache__\0003_profile.cpython-38.pyc" />
+    <Content Include="home\migrations\__pycache__\0004_delete_profile.cpython-38.pyc" />
+    <Content Include="home\migrations\__pycache__\0005_webusers.cpython-38.pyc" />
+    <Content Include="home\migrations\__pycache__\0006_auto_20200723_1510.cpython-38.pyc" />
+    <Content Include="home\migrations\__pycache__\0007_auto_20200723_1511.cpython-38.pyc" />
+    <Content Include="home\migrations\__pycache__\0008_auto_20200726_1627.cpython-38.pyc" />
+    <Content Include="home\migrations\__pycache__\__init__.cpython-38.pyc" />
+    <Content Include="home\__pycache__\admin.cpython-38.pyc" />
+    <Content Include="home\__pycache__\apps.cpython-38.pyc" />
+    <Content Include="home\__pycache__\forms.cpython-38.pyc" />
+    <Content Include="home\__pycache__\models.cpython-38.pyc" />
+    <Content Include="home\__pycache__\urls.cpython-38.pyc" />
+    <Content Include="home\__pycache__\views.cpython-38.pyc" />
+    <Content Include="home\__pycache__\__init__.cpython-38.pyc" />
+    <Content Include="horoscope\migrations\__pycache__\0001_initial.cpython-38.pyc" />
+    <Content Include="horoscope\migrations\__pycache__\0002_auto_20200726_1634.cpython-38.pyc" />
+    <Content Include="horoscope\migrations\__pycache__\0003_horoscope1_date_added.cpython-38.pyc" />
+    <Content Include="horoscope\migrations\__pycache__\0004_auto_20200726_1813.cpython-38.pyc" />
+    <Content Include="horoscope\migrations\__pycache__\__init__.cpython-38.pyc" />
+    <Content Include="horoscope\__pycache__\admin.cpython-38.pyc" />
+    <Content Include="horoscope\__pycache__\apps.cpython-38.pyc" />
+    <Content Include="horoscope\__pycache__\models.cpython-38.pyc" />
+    <Content Include="horoscope\__pycache__\urls.cpython-38.pyc" />
+    <Content Include="horoscope\__pycache__\views.cpython-38.pyc" />
+    <Content Include="horoscope\__pycache__\__init__.cpython-38.pyc" />
+    <Content Include="media\alice.png" />
+    <Content Include="media\alice1.png" />
+    <Content Include="media\alice_6aXgaH9.png" />
+    <Content Include="media\alice_D9Xuruq.png" />
+    <Content Include="media\alice_pjscf3n.png" />
+    <Content Include="media\alice_PLYUdt3.png" />
+    <Content Include="media\blog_image\JB_logo.jpg" />
+    <Content Include="media\blog_image\JB_logo_WvWKqDv.jpg" />
+    <Content Include="media\gd.jpg" />
+    <Content Include="media\gd_f9qpB8o.jpg" />
+    <Content Include="media\gd_fwlDWnm.jpg" />
+    <Content Include="media\gd_ooDWMk5.jpg" />
+    <Content Include="media\gd_Pvqubl4.jpg" />
+    <Content Include="media\gd_vaGT8Qg.jpg" />
+    <Content Include="media\gd_YPINd2H.jpg" />
+    <Content Include="media\huawei.png" />
+    <Content Include="media\janak_ba.jpg" />
+    <Content Include="media\janak_ba_2m19IR2.jpg" />
+    <Content Include="media\janak_ba_J5c9JLA.jpg" />
+    <Content Include="media\janak_ba_kKYL2g8.jpg" />
+    <Content Include="media\janak_ba_mLwyphv.jpg" />
+    <Content Include="media\janak_ba_peITK38.jpg" />
+    <Content Include="media\janak_ba_WamTpdh.jpg" />
+    <Content Include="media\JB_logo.jpg" />
+    <Content Include="media\JB_logo_iTuDDas.jpg" />
+    <Content Include="media\JB_logo_uaRd36P.jpg" />
+    <Content Include="media\JB_logo_z5UNIdL.jpg" />
+    <Content Include="media\KFD.png" />
+    <Content Include="media\KFD_5dgO2wD.png" />
+    <Content Include="media\KFD_BG1eRDD.png" />
+    <Content Include="media\KFD_jqvvmxj.png" />
+    <Content Include="media\logo2.png" />
+    <Content Include="media\made_don.jpg" />
+    <Content Include="media\made_don_FWYezzj.jpg" />
+    <Content Include="media\misfit5.png" />
+    <Content Include="media\munim1.jpg" />
+    <Content Include="media\nipuna1.png" />
+    <Content Include="media\nipuna1_RLaCegh.png" />
+    <Content Include="media\POULTRY.jpg" />
+    <Content Include="media\POULTRY_TiuJP64.jpg" />
+    <Content Include="requirements.txt" />
+    <Content Include="db.sqlite3" />
+    <Content Include="app\static\app\content\bootstrap.css" />
+    <Content Include="app\static\app\content\bootstrap.min.css" />
+    <Content Include="app\static\app\content\site.css" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\static\app\scripts\bootstrap.js" />
+    <Content Include="app\static\app\scripts\bootstrap.min.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.min.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.min.map" />
+    <Content Include="app\static\app\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.min.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="app\static\app\scripts\modernizr-2.6.2.js" />
+    <Content Include="app\static\app\scripts\respond.js" />
+    <Content Include="app\static\app\scripts\respond.min.js" />
+    <Content Include="app\static\app\scripts\_references.js" />
+    <Content Include="app\templates\app\about.html" />
+    <Content Include="app\templates\app\contact.html" />
+    <Content Include="app\templates\app\index.html" />
+    <Content Include="app\templates\app\layout.html" />
+    <Content Include="app\templates\app\login.html" />
+    <Content Include="app\templates\app\loginpartial.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.html">
+      <SubType>WebBrowser</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="Python 3.8\">
+      <Id>Python 3.8</Id>
+      <Version>3.8</Version>
+      <Description>Python 3.8 (Python 3.8 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

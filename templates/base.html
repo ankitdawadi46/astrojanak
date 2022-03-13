@@ -1,0 +1,93 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>asd</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1" />
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css">
+    <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 725px;
+        }
+    </style>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src="{% static 'js/jquery.ba-hashchange.min.js' %}"></script>
+    <script src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js"></script>
+
+    {% block customCSS %}
+    {% endblock %}
+</head>
+<body>
+
+    <header>
+       
+        <nav class="navbar fixed-top navbar-expand-xl">
+            <span id="image-brand">
+                <img src="{% static 'Images/logo.png' %}" class="hamburger">
+            </span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><ion-icon class="hamburger" name="menu-outline"></ion-icon></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="nav-contains">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="navbar-brand" href="/" aria-haspopup="true">गृहपृष्ठ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navbar-brand" href="/#about" aria-haspopup="true">हाम्रो बारे</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navbar-brand" href="/#services" aria-haspopup="true">हाम्रो सेवाहरु</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navbar-brand" href="/horoscope" aria-haspopup="true">मासिक राशिफल</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navbar-brand" href="/shop" aria-haspopup="true">सामग्रीहरू</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navbar-brand" href="/blog" aria-haspopup="true">ब्लग</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navbar-brand" href="/videos" aria-haspopup="true">भिडियो</a>
+                        <li class="nav-item">
+                            <a class="navbar-brand" href="/#contact" aria-haspopup="true">सम्पर्क</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </nav>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    {% block modal %}
+    {% endblock %}
+
+    {% block scripts %}
+    {% endblock %}
+    <footer class="footer text-center">
+        <a href="https://www.facebook.com/developersgd/"><ion-icon class="social-media-company" name="logo-facebook"></ion-icon></a>
+        <a href="https://www.instagram.com/developersgd_official/?hl=en"><ion-icon class="social-media-company" name="logo-instagram"></ion-icon></a>
+        <a href="https://twitter.com/GDDevelopersNe1"><ion-icon class="social-media-company" name="logo-twitter"></ion-icon></a>
+        <a href="https://www.linkedin.com/company/g-and-d-developers-nepal/"><ion-icon class="social-media-company" name="logo-linkedin"></ion-icon></a>
+        <br />
+        <b class="tribute">Made with ❤️ by <a class="tribute" href="http://developersgd.com/">G. And D. Developers</a></b>
+    </footer>
+</body>
+</html>
